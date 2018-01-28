@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4327146049306854}
+  - component: {fileID: 114454005763132046}
   m_Layer: 0
   m_Name: nosePoint
   m_TagString: Untagged
@@ -37,6 +38,7 @@ GameObject:
   - component: {fileID: 212647680469396044}
   - component: {fileID: 70610973288618814}
   - component: {fileID: 50542153523171296}
+  - component: {fileID: 95657146227368672}
   - component: {fileID: 114600049636450750}
   m_Layer: 0
   m_Name: Player 1
@@ -52,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1075050374510420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.49, y: -0.17, z: 0}
+  m_LocalPosition: {x: -2.49, y: -0.17, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4327146049306854}
@@ -107,6 +109,34 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.37, y: 0.75}
   m_Direction: 0
+--- !u!95 &95657146227368672
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1075050374510420}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b445de6ed16c44a3af49e0d4065ba9a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114454005763132046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1056852025610894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8e9932edf2d4c1b94c97a3c07d6957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114600049636450750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712a03c7464a041ba8cc368cf89e2220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  speed: 100
   mucusPrefab: {fileID: 1710258370747870, guid: dd71faee3bc484475a9e3cc94ca5c9e3,
     type: 2}
   whatToHit:

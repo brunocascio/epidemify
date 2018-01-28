@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject mucusPrefab;
 	public LayerMask whatToHit;
 
+	private Animator animator;
 	private Transform nosePoint;
 	private Rigidbody2D playerRigidBody;
 
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	void Awake()
 	{
 		playerRigidBody = transform.GetComponent<Rigidbody2D> ();
+		animator = transform.GetComponent<Animator> ();
 		nosePoint = transform.Find("nosePoint");
 	}
 
@@ -63,8 +65,14 @@ public class PlayerController : MonoBehaviour {
 		//Store the current horizontal input in the float moveHorizontal.
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 
+		animator.SetFloat ("Horizontal", moveHorizontal);
+
 		//Store the current vertical input in the float moveVertical.
 		float moveVertical = Input.GetAxis ("Vertical");
+
+		animator.SetFloat ("Vertical", moveVertical);
+
+		Debug.Log ("Velocity " + moveVertical + " " + moveHorizontal);
 
 		//Use the two store floats to create a new Vector2 variable movement.
 		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
