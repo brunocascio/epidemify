@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PersonaEnferma : MonoBehaviour {
+public class Persona : MonoBehaviour {
+
+	public Sprite sickSprite;
+	public bool isSick = false;
 
 	private float tChange = 0f; // force new direction in the first Update
 	private float randomX=0;
@@ -30,6 +33,15 @@ public class PersonaEnferma : MonoBehaviour {
 		}
 		Vector2 v = new Vector2 (randomX, randomY);
 		TheRigidBody.velocity = v * moveSpeed;
-			
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.CompareTag("Mucu"))
+		{
+			transform.GetComponent<AudioSource> ().Play ();
+			transform.GetComponent<SpriteRenderer> ().sprite = sickSprite;
+			transform.position = new Vector3 (transform.position.x, transform.position.y, -1);
+			isSick = true;
+		}
 	}
 }

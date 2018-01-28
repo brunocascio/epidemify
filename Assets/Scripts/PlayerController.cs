@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		showRaycast ();
+//		showRaycast ();
 		if (Input.GetMouseButtonDown(0))
 		{
 			Sneeze();
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour {
 
 		GameObject mucus = Instantiate (mucusPrefab, nosePoint.position, nosePoint.rotation);
 
-		Destroy (mucus, 0.3f);
+		Destroy (mucus, 0.8f);
 	}
 
 	//FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -71,8 +71,6 @@ public class PlayerController : MonoBehaviour {
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		animator.SetFloat ("Vertical", moveVertical);
-
-		Debug.Log ("Velocity " + moveVertical + " " + moveHorizontal);
 
 		//Use the two store floats to create a new Vector2 variable movement.
 		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);

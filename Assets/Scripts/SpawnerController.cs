@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnerController : MonoBehaviour {
 
-	public GameObject personaSana;
+	public GameObject persona;
 	public int maxPeople = 4;
 	public GameObject medic;
 	
@@ -18,7 +18,7 @@ public class SpawnerController : MonoBehaviour {
 	{
 		for (int i = 1; i <= maxPeople; i++) 
 		{
-			Instantiate (personaSana, transform.position, transform.rotation);
+			Instantiate (persona, transform.position, transform.rotation);
 		}
 	}
 

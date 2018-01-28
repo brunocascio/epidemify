@@ -52,8 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f97dc2f35fd490d962a3e42124e50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personaSana: {fileID: 1181048413379656, guid: 73a26f24b32f14330a5c1876cca535fa,
-    type: 2}
+  persona: {fileID: 1181048413379656, guid: 73a26f24b32f14330a5c1876cca535fa, type: 2}
   maxPeople: 5
   medic: {fileID: 1393684558609162, guid: a715a7a93196b4d2ba0ff8c0d2bbec5b, type: 2}
 --- !u!212 &212709466789125716
