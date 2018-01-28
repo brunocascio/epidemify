@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnGenerator : MonoBehaviour {
-	
-	// Use this for initialization
-	void start () {
-	}
-	
+public class MucusController : MonoBehaviour {
+
 	// Update is called once per frame
 	void Update () {
-		
+		transform.Translate (Vector3.right * Time.deltaTime * 5);	
 	}
 }

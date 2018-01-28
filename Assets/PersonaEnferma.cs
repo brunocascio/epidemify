@@ -23,7 +23,7 @@ public class PersonaEnferma : MonoBehaviour {
 		{
 			randomX = Random.Range(-1.0f,1.0f); // with float parameters, a random float
 			randomY = Random.Range(-1.0f,1.0f); //  between -2.0 and 2.0 is returned
-			randomVel = Random.Range(-1.0f, 1.0f);
+			randomVel = Random.Range(-0.5f, 0.5f);
 			// set a random interval between 0.5 and 1.5
 			tChange = Time.time + Random.Range(0.5f,1.5f);
 			moveSpeed += randomVel;
