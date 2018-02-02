@@ -11,7 +11,7 @@ public class SpawnerController : MonoBehaviour {
 	// Update is called once per frame
 	void Awake () {
 		spawnPeople ();
-		InvokeRepeating ("spawnMedics", 0f, Random.Range(20f, 30f));
+		InvokeRepeating ("spawnMedics", 3f, Random.Range(20f, 30f));
 	}
 
 	void spawnPeople()

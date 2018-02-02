@@ -5,10 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pared
-  - PersonaEnferma
-  - PersonaSana
   - Zonas
   - Mucu
+  - Persona
   layers:
   - Default
   - TransparentFX

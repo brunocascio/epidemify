@@ -20,7 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4249148636803498}
   - component: {fileID: 212099865936151358}
-  - component: {fileID: 50125058541535786}
+  - component: {fileID: 114564838812883148}
+  - component: {fileID: 70828070939497134}
+  - component: {fileID: 50567857571961524}
   m_Layer: 0
   m_Name: Medic
   m_TagString: Untagged
@@ -35,13 +37,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393684558609162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50125058541535786
+--- !u!50 &50567857571961524
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -61,6 +63,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &70828070939497134
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393684558609162}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.37, y: 0.75}
+  m_Direction: 0
+--- !u!114 &114564838812883148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393684558609162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22ef6d53f3e5364b9690e3522598752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1486977592215862, guid: 7660dc5dbdd196d4299d0f29053d4d95, type: 2}
+  people: {fileID: 1181048413379656, guid: 73a26f24b32f14330a5c1876cca535fa, type: 2}
+  chaseRange: 1
 --- !u!212 &212099865936151358
 SpriteRenderer:
   m_ObjectHideFlags: 1

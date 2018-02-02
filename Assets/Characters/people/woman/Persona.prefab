@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 70887541557885376}
   - component: {fileID: 82701692753596602}
   - component: {fileID: 114600097451556660}
+  - component: {fileID: 114175305243497598}
   m_Layer: 0
   m_Name: Persona
-  m_TagString: PersonaSana
+  m_TagString: Persona
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +147,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -159,6 +160,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114175305243497598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1181048413379656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c78d895d9a114409832bbce87255bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114600097451556660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sickSprite: {fileID: 21300000, guid: 1773e2ba526934faf905d98b10f67b51, type: 3}
-  isSick: 0
+  sick: 0
 --- !u!212 &212069370457234138
 SpriteRenderer:
   m_ObjectHideFlags: 1

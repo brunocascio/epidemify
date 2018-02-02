@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour {
 	
 	public float speed;
 	public GameObject mucusPrefab;
-	public LayerMask whatToHit;
 
 	private Animator animator;
 	private Transform nosePoint;
@@ -22,25 +21,10 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-//		showRaycast ();
 		if (Input.GetMouseButtonDown(0))
 		{
 			Sneeze();
 		}
-	}
-
-	void showRaycast()
-	{
-		Vector2 mousePosition = new Vector2 (
-			Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
-			Camera.main.ScreenToWorldPoint(Input.mousePosition).y
-		);
-		Vector2 nosePointPosition = new Vector2 (
-			nosePoint.position.x,
-			nosePoint.position.y
-		);
-
-		Debug.DrawLine (nosePointPosition, (mousePosition-nosePointPosition)*100, Color.red);
 	}
 
 	void Sneeze()
@@ -49,14 +33,8 @@ public class PlayerController : MonoBehaviour {
 			Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
 			Camera.main.ScreenToWorldPoint(Input.mousePosition).y
 		);
-		Vector2 nosePointPosition = new Vector2 (
-			nosePoint.position.x,
-			nosePoint.position.y
-		);
 
-		GameObject mucus = Instantiate (mucusPrefab, nosePoint.position, nosePoint.rotation);
-
-		Destroy (mucus, 0.8f);
+		Instantiate (mucusPrefab, nosePoint.position, nosePoint.rotation);
 	}
 
 	//FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
